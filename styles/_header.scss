@@ -1,0 +1,20 @@
+.wrapper {
+    .header {
+        padding-top: 50px;
+        padding-left: 110px;
+        position: fixed;
+        @include flex(row);
+        gap: .5em;
+        &>:nth-child(1) {
+            width: 15px;
+            height: 17px;
+            border-radius: 50%;
+            border: 2px solid black;
+            display: inline-block;
+        }
+        p {
+            display: inline;
+            margin-right: 3px;
+        }
+    }
+}

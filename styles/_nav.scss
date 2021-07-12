@@ -1,0 +1,66 @@
+.wrapper {
+    .nav {
+        position: fixed;
+        bottom: 10%;
+        left: 10%;
+        .index-wrapper {
+            // overflow: hidden; // @include flex(row);
+            // justify-content: space-around;
+            .index {
+                //     width: 100%;
+                //     @include flex(column);
+                //     overflow: hidden;
+                display: inline-block;
+                align-items: center;
+                margin-left: 50px;
+                margin-right: 70px;
+                margin-bottom: 15px;
+                span {
+                    cursor: pointer;
+                    color: silver;
+                    opacity: 0.6;
+                    position: relative;
+                    bottom: 50%;
+                    transition: all .4s ease-in-out;
+                    &::after {
+                        content: '';
+                        width: 2px;
+                        height: 1px;
+                        background: silver;
+                        position: absolute;
+                        display: block;
+                        bottom: -30px;
+                        left: 40%;
+                        // transition: all .4s ease-in-out;
+                    }
+                }
+            }
+            .index-active {
+                span {
+                    color: black;
+                    opacity: 1;
+                    position: relative;
+                    bottom: 30px;
+                    &::after {
+                        content: '';
+                        width: 2px;
+                        height: 30px;
+                        background: silver;
+                        position: absolute;
+                        display: block;
+                        bottom: -30px;
+                        left: 40%;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+        .line {
+            width: 400px;
+            height: 10px;
+            border-top: 2px solid silver;
+            z-index: 1222;
+            background: transparent;
+        }
+    }
+}
